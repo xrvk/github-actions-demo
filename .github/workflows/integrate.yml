@@ -9,10 +9,10 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2 #Brings your source code into current working directory 
+      - uses: actions/setup-node@v1 # Set up nodejs to run the following commands 
         with:
           node-version: 12
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
+      - run: npm ci # Similar to npm install, but does a clean install for your CI server
+      - run: npm test # Run the test command to test the code
+      - run: npm run build # Run the build command to make sure the code compiles properly
